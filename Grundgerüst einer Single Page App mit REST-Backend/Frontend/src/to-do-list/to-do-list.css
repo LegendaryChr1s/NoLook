@@ -1,0 +1,47 @@
+.tabs {
+    overflow: hidden;
+
+}
+
+.tabs button {
+    border: 1px #ccc;
+    background-color: #f1f1f1;
+    border-radius: 20px 20px 0px 0px;
+    width: 50%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1% 1%;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.content {
+    background-color: aqua;
+    width: 100%;
+    padding: 1%;;
+    height: 100%;
+}
+
+.content label {
+    border: none;
+    background: none;
+    width: 25%;
+}
+
+.content button {
+    border: none;
+    background: none;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 25%;
+}
+
+.content button:hover {
+    background-color: #ccc;
+}
+

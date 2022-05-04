@@ -1,12 +1,20 @@
 <!-- Stylesheet der Seite -->
-<style>
-    /* TODO: Stylesheet definieren  */
-    main {
-        color: red;
-    }
-</style>
-
+<head>
+    <link rel="stylesheet" href="to-do-list.css" />
+</head>
 <!-- Inhalt der Seite -->
-<main>
-    <!-- TODO: HTML-Gerüst definieren -->
-</main>
+<body>
+    <main>
+        <div class="tabs">
+            <button class="tab_button" onclick="tabChange('b01')">Kalender</button>
+            <button class="tab_button" onclick="tabChange('b02')">ToDo Liste</button>
+        </div>
+        <div class="content">
+            <button class="arrow">&#10094;</button>
+            <label class="date">Heute</label>
+            <label class="date">Morgen</label>
+            <button class="arrow">&#10095;</button>
+        </div>
+    </main>
+</body>
+
