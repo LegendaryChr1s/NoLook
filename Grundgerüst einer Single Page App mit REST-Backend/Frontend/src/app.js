@@ -30,7 +30,7 @@ class App {
             //// TODO: Eigene Routing-Regeln hier in der Mitte einfügen ////
             {
                 url: ".*",
-                show: () => this._gotoList()
+                show: () => this._gotoListTwo()
             },
         ]);
 
@@ -65,6 +65,19 @@ class App {
         try {
             // Dynamischer Import, vgl. https://javascript.info/modules-dynamic-imports
             let {default: PageList} = await import("./page-list/page-list.js");
+
+            let page = new PageList(this);
+            await page.init();
+            this._showPage(page, "list");
+        } catch (ex) {
+            this.showException(ex);
+        }
+    }
+
+    async _gotoListTwo() {
+        try {
+            // Dynamischer Import, vgl. https://javascript.info/modules-dynamic-imports
+            let {default: PageList} = await import("./to-do-list/page-list.js");
 
             let page = new PageList(this);
             await page.init();
