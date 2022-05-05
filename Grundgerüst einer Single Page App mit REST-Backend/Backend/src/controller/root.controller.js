@@ -32,11 +32,12 @@ export default class RootController {
     async index(req, res, next) {
         //// TODO: Example-Collection hier durch eigene Collections ersetzen ////
         res.sendResult([
-            // {
-            //     _name: "example",
-            //     query: {url: "/example", method: "GET", queryParams: ["search"]},
-            //     create: {url: "/example", method: "POST"},
-            // }
+            {
+            _name: "termine",
+            query: {url:"/termine", method: "GET", queryParams: ["search"]},
+            create: {url: "/termine", method: "POST"},
+            }
+
         ]);
 
         next();

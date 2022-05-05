@@ -22,7 +22,7 @@ class DatabaseFactory {
         await this.client.connect();
         this.database = this.client.db("app_database");
 
-        await this._createDemoData();
+        await this._createDatabase();
     }
 
     /**
@@ -30,27 +30,12 @@ class DatabaseFactory {
      * Produktivanwendung natürlich nicht machen, aber so sehen wir
      * wenigstens gleich ein paar Daten.
      */
-    async _createDemoData() {
+    async _createDatabase() {
         //// TODO: Methode anpassen, um zur eigenen App passende Demodaten anzulegen ////
         //// oder die Methode ggf. einfach löschen und ihren Aufruf oben entfernen.  ////
-        let examples = this.database.collection("example");
+        let termine = this.database.collection("termine");
 
-        if (await examples.estimatedDocumentCount() === 0) {
-            examples.insertMany([
-                {
-                    title: "Cloud Native Architecture and Design",
-                    author: "Shivakumar R Goniwada",
-                    publisher: "Apress",
-                    year: 2022,
-                },
-                {
-                    title: "Machine Learning Kompakt",
-                    author: "Andriy Burkov",
-                    publisher: "mitp",
-                    year: 2019,
-                },
-            ]);
-        }
+        
     }
 }
 
