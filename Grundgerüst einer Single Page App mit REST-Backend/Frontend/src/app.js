@@ -4,6 +4,8 @@ import Backend from "./backend.js";
 import Router from "./router.js";
 import "./app.css";
 
+let date = new Date();
+
 /**
  * Hauptklasse App: Steuert die gesamte Anwendung
  *
@@ -132,8 +134,65 @@ class App {
 window.addEventListener("load", async () => {
     let app = new App();
     await app.init();
-    
-    let output = backend.fetch("GET","/db/app_database/example");
-    alert(output);
-    
+    dateValue(); 
+    clear(); 
+    draw();  
 });
+
+function moveLeft() {
+    date.setMonth(date.getMonth() - 1);
+    dateValue();
+    clear();
+    draw();
+}
+
+function moveRight() {
+    date.setMonth(date.getMonth() + 1);
+    dateValue();
+    clear();
+    draw();
+}
+
+function dateValue() {
+    monat = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Okotber", "November", "Dezember",]
+    ausgabe = monat[date.getMonth()] + " " + date.getFullYear();
+    document.getElementById("month").textContent = ausgabe;
+}
+
+function draw() {
+    var helpDate = new Date(date.getFullYear(), date.getMonth(), 1);
+    var grey = 1;
+    var start = 1;
+    vergleich = [7, 0, 1, 2, 3, 4, 5, 6];
+    start = start + vergleich[helpDate.getDay()];
+    var id = "";
+    while (grey  < start) {
+        id = "calendar_entry_" + grey;
+        document.getElementById(id).style.backgroundColor = "grey";
+        grey = grey + 1;
+    }
+    var counter = 0;
+    while (helpDate.getMonth() == date.getMonth()) {
+        counter = counter + 1;
+        id = "calendar_entry_" + start;
+        document.getElementById(id).textContent = counter;
+        start = start + 1;
+        helpDate.setDate(helpDate.getDate() + 1); 
+    }
+    while (start < 43) {
+        id = "calendar_entry_" + start;
+        document.getElementById(id).style.backgroundColor = "grey";
+        start = start + 1;
+    }
+}
+
+function clear() {
+    var counter = 1;
+    var id = "";
+    while (counter < 43) {
+        id = "calendar_entry_" + counter;
+        document.getElementById(id).textContent = "";
+        document.getElementById(id).style.backgroundColor = "white";
+        counter = counter + 1;
+    }
+}
