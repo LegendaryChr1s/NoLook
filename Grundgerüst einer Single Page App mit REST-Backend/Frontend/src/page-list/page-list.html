@@ -5,10 +5,12 @@
 <!-- Inhalt der Seite -->
 <body>
     <main>
-        <div class="tabs">
-            <button class="tab_button" onclick="tabChange('b01')">Kalender</button>
-            <button class="tab_button" onclick="tabChange('b02')">ToDo Liste</button>
-        </div>
+      <div class="tabs">
+        <button id="calTab" class="tab_button">Kalender</button>
+        <button id="toDoTab" class="tab_button">ToDo Liste</button>
+    </div>
+      <div class="background">
+
         <div class="content">
           <div class="box">
             <table width=100% height=500>
@@ -145,6 +147,7 @@
                   </table>
                   </div>
         </div>
+      </div>
     </main>
 </body>
 

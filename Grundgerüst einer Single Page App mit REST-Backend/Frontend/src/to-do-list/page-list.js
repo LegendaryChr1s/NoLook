@@ -1,5 +1,3 @@
-"use strict";
-
 import Page from "../page.js";
 import HtmlTemplate from "./page-list.html";
 
@@ -14,7 +12,6 @@ export default class PageList extends Page {
      */
     constructor(app) {
         super(app, HtmlTemplate);
-        alert('test');
         this._emptyMessageElement = null;
     }
 
@@ -35,28 +32,16 @@ export default class PageList extends Page {
         //// TODO: Anzuzeigende Inhalte laden mit this._app.backend.fetch() ////
         //// TODO: Inhalte in die HTML-Struktur einarbeiten ////
         //// TODO: Neue Methoden für Event Handler anlegen und hier registrieren ////
-        HtmlTemplate.getElementByID("calTab").addEventListener("click", function tab() {
-            alert("Test");
-        }, true);
-        document.getElementById("calTab").addEventListener("click", function tab() {
-            alert("Test");
-        }, true);
-        document._mainElement.getElementByID("calTab").addEventListener("click", function tab() {
-            alert("Test");
-        }, true);
-        this._mainElement.getElementByID("calTab").addEventListener("click", function tab() {
-            alert("Test");
-        }, true);
-        this._mainElement.innerHTML.getElementByID("calTab").addEventListener("click", function tab() {
-            alert("Test");
-        }, false);
-        tab.style.color = 'black';
-        console.log(tab);
+        var element = this._mainElement.getElementById("calTab");
+        element.addEventListener("alert", alert('test'));
     }
-
-    tabChange(button) {
-        alert('test');
-    }
-
-
 };
+
+var element = this._mainElement.HtmlTemplate
+button = element._mainElement.getElementById("calTab").addEventListener("load", tabchange, true);
+this.init(app, element)
+
+function tabchange() {
+    button.
+}
+
