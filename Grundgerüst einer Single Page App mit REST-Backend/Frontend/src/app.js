@@ -24,12 +24,12 @@ class App {
         //// TODO: Routing-Regeln anpassen und ggf. neue Methoden anlegen ////
         this.router = new Router([
             {
-                url: "^/$",
+                url: "^/Kalender/$",
                 show: () => this._gotoCal()
             },
             //// TODO: Eigene Routing-Regeln hier in der Mitte einfügen ////
             {
-                url: ".*",
+                url: "^/ToDoListe/$",
                 show: () => this._gotoToDo()
             },
         ]);
@@ -68,7 +68,7 @@ class App {
 
             let page = new PageList(this);
             await page.init();
-            this._showPage(page, "list");
+            this._showPage(page, "Kalender");
         } catch (ex) {
             this.showException(ex);
         }
@@ -81,7 +81,7 @@ class App {
 
             let page = new PageList(this);
             await page.init();
-            this._showPage(page, "list");
+            this._showPage(page, "ToDoListe");
         } catch (ex) {
             this.showException(ex);
         }

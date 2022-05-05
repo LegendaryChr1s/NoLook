@@ -37,11 +37,4 @@ export default class PageList extends Page {
     }
 };
 
-var element = this._mainElement.HtmlTemplate
-button = element._mainElement.getElementById("calTab").addEventListener("load", tabchange, true);
-this.init(app, element)
-
-function tabchange() {
-    button.
-}
 

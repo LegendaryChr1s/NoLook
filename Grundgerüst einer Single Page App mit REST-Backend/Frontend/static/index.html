@@ -8,7 +8,7 @@
 
         <!-- Mit esbuild erzeugte Bundles aus allen JS/CSS-Dateien -->
         <script src="app.js" type="module"></script>
-        <link rel="stylesheet" href="../src/app.css" />
+        <link rel="stylesheet" href="app.css" />
 
         <!-- Dummy-Element für dynamisch nachgeladene CSS-Anweisungen -->
         <style id="page-css"></style>
@@ -23,8 +23,8 @@
 
     <body>
         <div class="tabs">
-          <button id="calTab" class="tab_button">Kalender</button>
-          <button id="toDoTab" class="tab_button">ToDo Liste</button>
+          <a href="#/Kalender/"><button id="calTab" class="tab_button">Kalender</button></a>
+          <a href="#/ToDoListe/"><button id="toDoTab" class="tab_button">ToDo Liste x</button></a>
       </div>
       <center>
       <div class="background">
