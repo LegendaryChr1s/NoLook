@@ -8,7 +8,7 @@
 
         <!-- Mit esbuild erzeugte Bundles aus allen JS/CSS-Dateien -->
         <script src="app.js" type="module"></script>
-        <link rel="stylesheet" href="app.css" />
+        <link rel="stylesheet" href="../src/app.css" />
 
         <!-- Dummy-Element für dynamisch nachgeladene CSS-Anweisungen -->
         <style id="page-css"></style>
@@ -20,19 +20,19 @@
 
     </head>
 
+
     <body>
+        <div class="tabs">
+          <button id="calTab" class="tab_button">Kalender</button>
+          <button id="toDoTab" class="tab_button">ToDo Liste</button>
+      </div>
       <center>
-      <table id="menu">
-        <tr>
-          <td class = 'kalender'>Kalender</td>
-          <td class = 'todos'>To Do's</td>
-        </tr>
-
-
-      </table>
-      </center>
-      <p></p>
-      <center>
+      <div class="background">
+        <div class="title">
+          <button class="arrow">&#10094;</button>
+          <label class="date">Mai 2022</label>
+          <button class="arrow">&#10095;</button>
+        </div>
       <table id='calendar'>
         
 
@@ -128,6 +128,6 @@
           <div id="calendar"></div>
         </div>
       -->
-        
+    </div>  
       </body>
 </html>

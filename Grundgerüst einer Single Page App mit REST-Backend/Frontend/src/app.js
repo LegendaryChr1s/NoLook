@@ -25,12 +25,12 @@ class App {
         this.router = new Router([
             {
                 url: "^/$",
-                show: () => this._gotoList()
+                show: () => this._gotoCal()
             },
             //// TODO: Eigene Routing-Regeln hier in der Mitte einfügen ////
             {
                 url: ".*",
-                show: () => this._gotoListTwo()
+                show: () => this._gotoToDo()
             },
         ]);
 
@@ -61,7 +61,7 @@ class App {
     /**
      * Übersichtsseite anzeigen. Wird vom Single Page Router aufgerufen.
      */
-    async _gotoList() {
+    async _gotoCal() {
         try {
             // Dynamischer Import, vgl. https://javascript.info/modules-dynamic-imports
             let {default: PageList} = await import("./page-list/page-list.js");
@@ -74,7 +74,7 @@ class App {
         }
     }
 
-    async _gotoListTwo() {
+    async _gotoToDo() {
         try {
             // Dynamischer Import, vgl. https://javascript.info/modules-dynamic-imports
             let {default: PageList} = await import("./to-do-list/page-list.js");

@@ -36,20 +36,16 @@ body {
 
 }
 
-.underTabs button:hover {
+button:hover {
     background-color: rgb(159, 226, 178);
-}
-
-#calTab {
-    background-color: #bebebe52; 
 }
 
 #calTab:hover {
     background-color: rgb(159, 226, 178);
 }
 
-.tabs button:hover {
-    background-color: rgb(159, 226, 178);
+#calTab {
+    background-color: #bebebe52; 
 }
 
 .background {
