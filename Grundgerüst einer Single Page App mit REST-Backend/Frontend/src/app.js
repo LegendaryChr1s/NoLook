@@ -132,6 +132,8 @@ class App {
 window.addEventListener("load", async () => {
     let app = new App();
     await app.init();
-    let Name = prompt("Geben sie den Terminnamen ein", ' ');
-    let Datum = prompt("Geben sie das Datum ein", ' ');
+    
+    let output = backend.fetch("GET","/db/app_database/example");
+    alert(output);
+    
 });
