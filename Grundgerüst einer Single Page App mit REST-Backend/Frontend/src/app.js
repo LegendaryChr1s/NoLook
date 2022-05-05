@@ -132,4 +132,6 @@ class App {
 window.addEventListener("load", async () => {
     let app = new App();
     await app.init();
+    let Name = prompt("Geben sie den Terminnamen ein", ' ');
+    let Datum = prompt("Geben sie das Datum ein", ' ');
 });
