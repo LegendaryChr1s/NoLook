@@ -4,7 +4,7 @@ body {
 
 .tabs {
     overflow: hidden;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-right: 2%;
 }
 
@@ -19,6 +19,33 @@ body {
     padding: 1% 1%;
     transition: 0.3s;
     border-bottom: 0px;
+
+}
+
+.underTabs button {
+    background-color: #f1f1f1;
+    width: 100%;
+    float: left;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    height: 35px;
+
+}
+
+.underTabs button:hover {
+    background-color: rgb(159, 226, 178);
+}
+
+#calTab {
+    background-color: #bebebe52; 
+}
+
+#calTab:hover {
+    background-color: rgb(159, 226, 178);
 }
 
 .tabs button:hover {

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <!-- TODO: Titel ändern -->
-        <title>Beispiel</title>
+        <title>Kalender</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Mit esbuild erzeugte Bundles aus allen JS/CSS-Dateien -->
@@ -15,30 +15,119 @@
 
         <!-- https://pixabay.com/vectors/phone-call-telephone-651704/ -->
         <link rel="shortcut icon" href="favicon.svg" />
+
+        
+
     </head>
+
     <body>
+      <center>
+      <table id="menu">
+        <tr>
+          <td class = 'kalender'>Kalender</td>
+          <td class = 'todos'>To Do's</td>
+        </tr>
+
+
+      </table>
+      </center>
+      <p></p>
+      <center>
+      <table id='calendar'>
+        
+
+        <tr>
+          <td class='calendar_day'>Mo</td>
+          <td class='calendar_day'>Di</td>
+          <td class='calendar_day'>Mi</td>
+          <td class='calendar_day'>Do</td>
+          <td class='calendar_day'>Fr</td>
+          <td class='calendar_day'>Sa</td>
+          <td class='calendar_day'>So</td>
+        </tr>
+        <tr>
+          <td class='calendar_entry' id='calendar_entry_1'></td>
+          <td class='calendar_entry' id='calendar_entry_2'></td>
+          <td class='calendar_entry' id='calendar_entry_3'></td>
+          <td class='calendar_entry' id='calendar_entry_4'></td>
+          <td class='calendar_entry' id='calendar_entry_5'></td>
+          <td class='calendar_entry' id='calendar_entry_6'></td>
+          <td class='calendar_entry' id='calendar_entry_7'>1</td>
+        </tr>
+        <tr>
+          <td class='calendar_entry' id='calendar_entry_8'>2</td>
+          <td class='calendar_entry' id='calendar_entry_9'>3</td>
+          <td class='calendar_entry' id='calendar_entry_10'>4</td>
+          <td class='calendar_entry' id='calendar_entry_11'>5</td>
+          <td class='calendar_entry' id='calendar_entry_12'>6</td>
+          <td class='calendar_entry' id='calendar_entry_13'>7</td>
+          <td class='calendar_entry' id='calendar_entry_14'>8</td>
+        </tr>
+        <tr>
+          <td class='calendar_entry' id='calendar_entry_15'>9</td>
+          <td class='calendar_entry' id='calendar_entry_16'>10</td>
+          <td class='calendar_entry' id='calendar_entry_17'>11</td>
+          <td class='calendar_entry' id='calendar_entry_18'>12</td>
+          <td class='calendar_entry' id='calendar_entry_19'>13</td>
+          <td class='calendar_entry' id='calendar_entry_20'>14</td>
+          <td class='calendar_entry' id='calendar_entry_21'>15</td>
+        </tr>
+        <tr>
+          <td class='calendar_entry' id='calendar_entry_22'>16</td>
+          <td class='calendar_entry' id='calendar_entry_23'>17</td>
+          <td class='calendar_entry' id='calendar_entry_24'>18</td>
+          <td class='calendar_entry' id='calendar_entry_25'>19</td>
+          <td class='calendar_entry' id='calendar_entry_26'>20</td>
+          <td class='calendar_entry' id='calendar_entry_27'>21</td>
+          <td class='calendar_entry' id='calendar_entry_28'>22</td>
+        </tr>
+        <tr>
+          <td class='calendar_entry' id='calendar_entry_29'>23</td>
+          <td class='calendar_entry' id='calendar_entry_30'>24</td>
+          <td class='calendar_entry' id='calendar_entry_31'>25</td>
+          <td class='calendar_entry' id='calendar_entry_32'>26</td>
+          <td class='calendar_entry' id='calendar_entry_33'>27</td>
+          <td class='calendar_entry' id='calendar_entry_34'>28</td>
+          <td class='calendar_entry' id='calendar_entry_35'>29</td>
+        </tr>
+        <tr>
+          <td class='calendar_entry' id='calendar_entry_36'>30</td>
+          <td class='calendar_entry' id='calendar_entry_37'>31</td>
+          <td class='calendar_entry' id='calendar_entry_38'></td>
+          <td class='calendar_entry' id='calendar_entry_39'></td>
+          <td class='calendar_entry' id='calendar_entry_40'></td>
+          <td class='calendar_entry' id='calendar_entry_41'></td>
+          <td class='calendar_entry' id='calendar_entry_42'></td>
+        </tr>
+      </table></center>
     
+      
+    
+    
+        <!--
         <div id="container">
           <div id="header">
             <div id="monthDisplay"></div>
             <div>
-              <button id="backButton">Back</button>
-              <button id="nextButton">Next</button>
+              <button id="backButton">Zurück</button>
+              <button id="nextButton">Vor</button>
             </div>
           </div>
     
           <div id="weekdays">
-            <div>Sunday</div>
-            <div>Monday</div>
-            <div>Tuesday</div>
-            <div>Wednesday</div>
-            <div>Thursday</div>
-            <div>Friday</div>
-            <div>Saturday</div>
+            
+            <div>Montag</div>
+            <div>Dienstag</div>
+            <div>Mittwoch</div>
+            <div>Donnerstag</div>
+            <div>Freitag</div>
+            <div>Samstag</div>
+            <div>Sonntag</div>
           </div>
     
           <div id="calendar"></div>
         </div>
-
+      -->
+        
       </body>
 </html>

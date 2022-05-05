@@ -1,15 +1,20 @@
 <!-- Stylesheet der Seite -->
 <head>
     <link rel="stylesheet" href="to-do-list.css" />
+    <script type="module" src="page-list.js"></script>
 </head>
 <!-- Inhalt der Seite -->
 <body>
     <main>
         <div class="tabs">
-            <button class="tab_button" onclick="tabChange('b01')">Kalender</button>
-            <button class="tab_button" onclick="tabChange('b02')">ToDo Liste</button>
+            <button id="calTab" class="tab_button" onclick="tabChange('bo1')">Kalender</button>
+            <button id="toDoTab" class="tab_button" onclick="tabChange('bo1')">ToDo Liste</button>
         </div>
+
         <div class="background">
+            <div class="underTabs">
+                <button class="underTab_button">Neue Aufgabe</button>
+            </div>
         <div class="content">
             <button class="arrow">&#10094;</button>
             <label class="date">Heute</label>
@@ -173,5 +178,6 @@
         </div>
     </div>
     </main>
+
 </body>
 
