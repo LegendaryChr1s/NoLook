@@ -1,0 +1,19 @@
+header {
+    position: relative;
+}
+
+#hauptnavigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, #571a00, #ffb44b);
+    display: flex;
+}
+
+.nav{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
