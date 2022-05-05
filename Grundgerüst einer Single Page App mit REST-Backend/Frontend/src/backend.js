@@ -46,8 +46,13 @@ export default class Backend {
      * @param {object} options Konfigurationswerte (optional)
      * @returns {Promise} Ergebnis des eigentlichen fetch()-Aufrufs
      */
+
+
     async fetch(method, url, options) {
         options = options || {};
+
+        
+
 
         // Query-Parameter an die URL anhängen
         if (options.query) {
