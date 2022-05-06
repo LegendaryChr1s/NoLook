@@ -13,7 +13,8 @@ info:
 servers:
 - url: http://localhost:3000
 tags:
-- name: Beispiel
+- name: Index
+- name: Example
 paths:
   /:
     get:
@@ -48,7 +49,7 @@ paths:
       style: form
       explode: true
       schema:
-        type: String
+        type: string
     - name: author
       in: query
       description: Autor der Arbeit
@@ -56,7 +57,7 @@ paths:
       style: form
       explode: true
       schema:
-        type: String
+        type: string
     - name: publisher
       in: query
       description: Publisher der Arbeit
@@ -64,7 +65,7 @@ paths:
       style: form
       explode: true
       schema:
-        type: String
+        type: string
     - name: year
       in: query
       description: Jahr der Arbeit
@@ -72,7 +73,17 @@ paths:
       style: form
       explode: true
       schema:
-        type: integer
+        type: string
+    responses: 
+      "200":
+        description: OK
+        content: 
+          application/json: 
+            schema:
+              type: array
+              items: 
+                $ref: '#/components/schemas/Example'
+              x-content-type: application/json
 
   post:
     tags:
@@ -84,18 +95,18 @@ paths:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/example'
+            $ref: '#/components/schemas/Example'
     responses:
       "201":
         description: Created
         headers:
           Location:
             schema:
-              type: String
+              type: string
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/example'
+              $ref: '#/components/schemas/Example'
 
  // 
 
@@ -152,7 +163,7 @@ paths:
         publisher:
           type: string
         year:
-          type: integer
+          type: string
       required:
         - title
         - author
@@ -160,7 +171,7 @@ paths:
         _id: "621ff9a936997df5baba746e"
         title: "Fox"
         author: "Mulder"
-        year: 2022
+        year: "2022"
         publisher: "Michi"
 
   securitySchemes: {}

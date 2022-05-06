@@ -49,7 +49,7 @@ export default class Backend {
 
 
     async fetch(method, url, options) {
-        
+ 
         options = options || {};
 
         
@@ -84,11 +84,11 @@ export default class Backend {
         fetchOptions.headers["Accept"] = "application/json";
 
         // REST-Webservice aufrufen
-       // alert(`${this._url}${url}`);
+        alert(`${this._url}${url}`);
         let response = await fetch(`${this._url}${url}`, fetchOptions);
-
+        alert("Test2");
         if (response.ok) {
-           
+                   
             return await response.json();
         } else {
             // Exception werfen, wenn ein Fehler empfangen wurde
