@@ -170,13 +170,6 @@ button:hover {
     background-color: rgb(159, 226, 178);
 }
 
-#toDoTab:hover {
-    background-color: rgb(159, 226, 178);
-}
-
-#toDoTab {
-    background-color: #bebebe52; 
-}
 
 .background {
     border: 2px solid black;
@@ -188,6 +181,7 @@ button:hover {
   height: 100%;
   background: none;
   border: 0px solid black;
+  cursor: pointer;
 }
 
 #calendar button:hover {

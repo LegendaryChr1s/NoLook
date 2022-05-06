@@ -86,7 +86,7 @@ export default class Backend {
         // REST-Webservice aufrufen
         alert(`${this._url}${url}`);
         let response = await fetch(`${this._url}${url}`, fetchOptions);
-        alert("Test2");
+        //alert("Test2");
         if (response.ok) {
                    
             return await response.json();

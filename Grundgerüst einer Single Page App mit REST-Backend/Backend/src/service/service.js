@@ -13,7 +13,7 @@ export default class TerminService {
      * Konstruktor.
      */
     constructor() {
-        this._termine = DatabaseFactory.database.collection("termine");
+        this._termine = DatabaseFactory.database.collection("example");
     }
 
     /**

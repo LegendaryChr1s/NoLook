@@ -97,7 +97,7 @@ new TerminController(server, "/example");
 
 // Server tatsächlich starten
 server.listen(config.port, config.host, function() {
-<<<<<<< HEAD
+
     //// TODO: Konsolenausgabe anpassen (Name des Services usw.) ////
     console.log();
     console.log("=============");
@@ -115,25 +115,7 @@ server.listen(config.port, config.host, function() {
     console.log("  » MONGODB: URL-String mit den Verbindungsdaten zur Mongo-Datenbank");
     console.log();
     console.log(`OpenAPI-Spezifikation: ${openApiFile}`);
-=======
-//// TODO: Konsolenausgabe anpassen (Name des Services usw.) ////
-console.log();
-console.log("=============");
-console.log("MyApp-Server");
-console.log("=============");
-console.log();
-console.log("Ausführung mit folgender Konfiguration:");
-console.log();
-console.log(config);
-console.log();
-console.log("Nutzen Sie die folgenden Umgebungsvariablen zum Anpassen der Konfiguration:");
-console.log();
-console.log(" » PORT: TCP-Port, auf dem der Webserver erreichbar ist");
-console.log(" » HOST: Hostname oder IP-Addresse, auf welcher der Webserver erreichbar ist");
-console.log(" » MONGODB: URL-String mit den Verbindungsdaten zur Mongo-Datenbank");
-console.log();
-console.log(`OpenAPI-Spezifikation: ${openApiFile}`)
->>>>>>> dab65cf9f9bd6fda18275a18e273a42843eb8670
+
 
 if (openApiValidation.error) {
 console.error(`${openApiValidation.error}\n`);
