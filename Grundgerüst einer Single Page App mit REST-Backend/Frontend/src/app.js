@@ -132,7 +132,7 @@ class App {
 
         // Sichtbaren Hauptinhalt austauschen
         let mainElement = this._bodyElement.querySelector("main")?.remove();
-        this._bodyElement.appendChild(mainElement);
+        this._bodyElement.appendChild(page.mainElement);
     }
 
     /**
