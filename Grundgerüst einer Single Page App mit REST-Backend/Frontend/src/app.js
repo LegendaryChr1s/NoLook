@@ -65,7 +65,6 @@ class App {
         try {
             await this.backend.init();
             this.router.start();
-            this._gotoCal();
         } catch (ex) {
             this.showException(ex);
         }
