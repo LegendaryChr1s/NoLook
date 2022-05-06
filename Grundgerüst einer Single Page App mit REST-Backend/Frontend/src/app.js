@@ -137,8 +137,8 @@ window.addEventListener("load", async () => {
     let app = new App();
     
     await app.init();
-    alert("Test");
-    let data = await this.app.backend.fetch("GET", '/db/app_database/example');
+    alert("Test32");
+    let data = await app.backend.fetch("GET", '/db/app_database/example', "");
     
     alert("data[0]");
     
