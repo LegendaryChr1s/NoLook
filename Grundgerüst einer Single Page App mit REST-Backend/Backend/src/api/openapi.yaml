@@ -33,7 +33,72 @@ paths:
                   $ref: '#/components/schemas/HATEOAS_Collection'
                 x-content-type: application/json
 
-components:
+/example:
+  get:
+    tags:
+    - Example
+    summary: Suche nach Terminen
+    description: Suche nach Terminen
+    operationId: search-example
+    parameters:
+    - name: title
+      in: query
+      description: Titel der Arbeit
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: String
+    - name: author
+      in: query
+      description: Autor der Arbeit
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: String
+    - name: publisher
+      in: query
+      description: Publisher der Arbeit
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: String
+    - name: year
+      in: query
+      description: Jahr der Arbeit
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: integer
+
+  post:
+    tags:
+    - Example
+    summary: Erstelle Terminen
+    description: Suche nach Terminen
+    operationId: create-example
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/example'
+    responses:
+      "201":
+        description: Created
+        headers:
+          Location:
+            schema:
+              type: String
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/example'
+
+ // 
+
   schemas:
     HATEOAS_Collection:
       title: HATEOAS-Links einer Collection
@@ -72,4 +137,31 @@ components:
           items:
             type: string
 
+    Example
+      title: example
+      type: object
+      properties:
+        _links:
+          $ref: '#/components/schemas/HATEOAS_Resource'
+        _id:
+          type: string
+        title:
+          type: string
+        author:
+          type: string
+        publisher:
+          type: string
+        year:
+          type: integer
+      required:
+        - title
+        - author
+      example:
+        _id: "621ff9a936997df5baba746e"
+        title: "Fox"
+        author: "Mulder"
+        year: 2022
+        publisher: "Michi"
+
   securitySchemes: {}
+      

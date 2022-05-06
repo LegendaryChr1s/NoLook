@@ -47,7 +47,7 @@ export default class Backend {
      * @returns {Promise} Ergebnis des eigentlichen fetch()-Aufrufs
      */
     async fetch(method, url, options) {
-        alert("Test");
+        
         options = options || {};
 
         // Query-Parameter an die URL anhängen
@@ -79,15 +79,17 @@ export default class Backend {
         fetchOptions.headers["Accept"] = "application/json";
 
         // REST-Webservice aufrufen
-        alert(`${this._url}${url}`);
+       // alert(`${this._url}${url}`);
         let response = await fetch(`${this._url}${url}`, fetchOptions);
 
         if (response.ok) {
+           
             return await response.json();
         } else {
             // Exception werfen, wenn ein Fehler empfangen wurde
             let contentType = response.headers.get("Content-Type");
-
+          
+            
             if (contentType.includes("json")) {
                 throw await response.json();
             } else {
