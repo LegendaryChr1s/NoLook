@@ -1,47 +1,19 @@
 
-body {
-    background-image: url(../img/background.png);
-}
 
 
-.tabs button:hover {
-    background-color: rgb(159, 226, 178);
-}
-
-.tabs {
-    overflow: hidden;
-    margin-left: 3%;
-    margin-right: 2%;
-}
-
-.tabs button {
-    background-color: #bebebe52;
-    border-radius: 20px 20px 0px 0px;
-    width: 20%;
-    margin-right: 0.2%;
-    float: left;
-    cursor: pointer;
-    margin-top: 0.8%;
-    padding: 1% 1%;
-    transition: 0.3s;
-    border-bottom: 0px;
-
-}
-
-
-.content {
+main .content {
     background-color: rgba(250, 246, 246, 0.61);
     padding: 1%;;
     height: 100%;
 }
 
-.content label {
+main .content label {
     border: none;
     background: none;
     width: 25%;
 }
 
-.content button {
+main .content button {
     border: none;
     background: none;
     transition: 0.3s;
@@ -49,24 +21,24 @@ body {
     width: 25%;
 }
 
-.content button:hover {
+main .content button:hover {
     background-color: #ccc;
 }
 
-.content table { 
+main .content table { 
     background-color: lightblue;
     color: black;
     border: solid black;
     padding: 0em 0em 0em 0em;
 }
 
-.content2 table { 
+main .content2 table { 
     background-color: lightblue;
     color: black;
     padding: 0em 4em 0em 0em;
 }
 
-.box {
+main .box {
     float: left;
     width: 45%;
     margin-right: 3.33333%;
@@ -75,11 +47,11 @@ body {
     box-sizing: border-box;
 }
 
-a:link, a:visited {
+main a:link, a:visited {
     text-decoration: none;
    }
 
-.box2 {
+   main .box2 {
     float: right;
     width: 45%;
     margin-right: 0;
@@ -88,25 +60,25 @@ a:link, a:visited {
     box-sizing: border-box;
 }
 
-#icon {
+main #icon {
     width: 10px;
 
 }
 
-#icon2 {
+main #icon2 {
     width: 10px
 }
 
-#termin{
+main #termin{
     width: 90%
 
 }
 
-#uhrzeit{
+main #uhrzeit{
     width: 10%
 }
 
-.underTabs button {
+main .underTabs button {
     background-color: #f1f1f1;
     width: 100%;
     float: left;
@@ -120,7 +92,7 @@ a:link, a:visited {
 
 }
 
-.background {
+main .background {
     border: 2px solid black;
     margin-left: 2%;
     margin-right: 2%;

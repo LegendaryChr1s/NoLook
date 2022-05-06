@@ -1,9 +1,9 @@
-.background {
+main .background {
     border: 2px solid black;
     background-color: rgba(250, 246, 246, 0.61);
 }
 
-#calendar button {
+main #calendar button {
   width: 100%;
   height: 100%;
   background: none;
@@ -11,12 +11,12 @@
   cursor: pointer;
 }
 
-#calendar button:hover {
+main #calendar button:hover {
   background-color: rgb(159, 226, 178);
   border: 2px solid black;
 }
 
-  .calendar_link {
+ main .calendar_link {
     font-family: Arial;
     font-size: 12px;
     text-align: center;
@@ -24,7 +24,7 @@
     text-decoration: none;
   }
   
-  .calendar_head {
+ main .calendar_head {
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;
@@ -32,7 +32,7 @@
     width: 25px;
   }
   
-  .calendar_head_month {
+ main .calendar_head_month {
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;
@@ -42,7 +42,7 @@
     color: #FFFFFF;
   }
   
-  .calendar_day {
+ main .calendar_day {
     font-family: Arial;
     font-size: 18px;
     font-weight: bold;
@@ -54,24 +54,24 @@
     
   }
   
-.title {
+main .title {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   font-size: 28px;
   padding: 2% 2% 2% 2%;
 }
 
-.title button {
+main .title button {
   border: 1px solid black;
   background: none;
   font-size: 28px;
 }
 
-.title button:hover {
+main .title button:hover {
   background-color: rgb(159, 226, 178);
 }
 
-  .calendar_entry {
+ main .calendar_entry {
     font-family: Arial;
     font-size: 14px;
     text-align: left;
@@ -81,10 +81,4 @@
     color: #d3d3d3;
     font-weight: bold;
     
-  }
-
-  body {
-    margin-top: 50px;
-    justify-content: center;
-    background-color: #1f2633;
   }

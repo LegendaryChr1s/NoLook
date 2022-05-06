@@ -65,6 +65,7 @@ class App {
         try {
             await this.backend.init();
             this.router.start();
+            this._gotoCal();
         } catch (ex) {
             this.showException(ex);
         }
@@ -131,7 +132,7 @@ class App {
         this._menuElement.querySelectorAll(`li[data-page-name="${name}"]`).forEach(li => li.classList.add("active"));
 
         // Sichtbaren Hauptinhalt austauschen
-        let mainElement = this._bodyElement.querySelector("main")?.remove();
+        this._bodyElement.querySelector("main")?.remove();
         this._bodyElement.appendChild(page.mainElement);
     }
 

@@ -1,28 +1,5 @@
-body {
-    background-image: url(../img/background.png);
-}
 
-.tabs {
-    overflow: hidden;
-    margin-left: 3%;
-    margin-right: 2%;
-}
-
-.tabs button {
-    background-color: #f1f1f1;
-    border-radius: 20px 20px 0px 0px;
-    width: 20%;
-    margin-right: 0.2%;
-    float: left;
-    cursor: pointer;
-    margin-top: 3%;
-    padding: 1% 1%;
-    transition: 0.3s;
-    border-bottom: 0px;
-
-}
-
-.underTabs button {
+main .underTabs button {
     background-color: #f1f1f1;
     width: 100%;
     float: left;
@@ -36,19 +13,7 @@ body {
 
 }
 
-button:hover {
-    background-color: rgb(159, 226, 178);
-}
-
-#calTab:hover {
-    background-color: rgb(159, 226, 178);
-}
-
-#calTab {
-    background-color: #bebebe52; 
-}
-
-.background {
+main .background {
     border: 2px solid black;
     margin-left: 2%;
     margin-right: 2%;
@@ -56,7 +21,7 @@ button:hover {
     height: 80%;
 }
 
-.content {
+main .content {
 
     display: grid;
     grid-template-areas: 'title title title title';
@@ -68,7 +33,7 @@ button:hover {
     row-gap: 15%;
 }
 
-.content label {
+main .content label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +44,7 @@ button:hover {
     font-size: 28px;
 }
 
-.content button {
+main .content button {
     background: none;
     border: none;
     transition: 0.3s;
@@ -89,7 +54,7 @@ button:hover {
     font-size: 28px;
 }
 
-.content textarea {
+main .content textarea {
     height: 100%;
     resize: none;
     width: 100%;
@@ -98,36 +63,30 @@ button:hover {
     background: none;
 }
 
-.content button:hover {
+main .content button:hover {
     background-color: rgb(159, 226, 178);
 }
 
-.toDos {
+main .toDos {
     display: grid;
     row-gap: 10px;
     grid-template-columns:80% 20%;
 }
 
-#check {
+main #check {
     background-image: url(../img/check.png);
 
 }
-#edit {
+main #edit {
     background-image: url(../img/pen.png);
 
 }
-#delete {
+main #delete {
     background-image: url(../img/trash.png);
 
 }
 
-.toDos button {
-    width: 25px;
-    height: 25px;
-    border: none;
-}
-
-#empty {
+main #empty {
     border: none;
     height: 380px;
 }
