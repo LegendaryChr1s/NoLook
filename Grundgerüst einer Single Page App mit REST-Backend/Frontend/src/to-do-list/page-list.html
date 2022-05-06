@@ -1,8 +1,11 @@
 <!-- Stylesheet der Seite -->
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="to-do-list.css" />
-    <script src="page-list.js"></script>
+    <link rel="stylesheet" href="./to-do-list.css" />
+    <script src="./page-list.js"></script>
+
+     <!-- Dummy-Element für dynamisch nachgeladene CSS-Anweisungen -->
+     <style id="page-css"></style>
 </head>
 <!-- Inhalt der Seite -->
 <body>
@@ -14,7 +17,7 @@
 
         <div class="background">
             <div class="underTabs">
-                <button class="underTab_button">Neue Aufgabe</button>
+                <button class="underTab_button" onclick="showForm()">Neue Aufgabe</button>
             </div>
         <div class="content">
             <button class="arrow">&#10094;</button>
@@ -173,6 +176,66 @@
 
             </div>
             <textarea id="empty" disabled></textarea>
+
+            <script>
+                function showForm() {
+                  document.getElementById('form').style.display = "block";
+                }
+        
+              </script>
+            </center>
+            
+              <center>
+            </div>
+            
+            <div class="form" id="form" style="display:none">
+              <form class="form-container">
+                <h1>Neuer Eintrag</h1>
+            
+                <label for="titel"><b>Titel: </b></label>
+                <input type="text" placeholder="Titel eingeben" required>
+                <p></p>
+                <label for="datum"><b>Datum:</b></label>
+                <input type="date" required>
+                <p></p>
+                <label for="uhrzeit"><b>Uhrzeit:</b></label>
+        
+                <select name="uhrzeit" id="uhrzeit">
+                  <option value="8">8:00</option>
+                  <option value="9">9:00</option>
+                  <option value="10">10:00</option>
+                  <option value="11">11:00</option>
+                  <option value="11">12:00</option>
+                  <option value="11">13:00</option>
+                  <option value="11">14:00</option>
+                  <option value="11">15:00</option>
+                  <option value="11">16:00</option>
+                </select>
+                <p></p>
+                <label for="uhrzeit"><b>Dauer:</b></label>
+        
+                <select name="dauer" id="dauer">
+                  <option value="1h">1h</option>
+                  <option value="2h">2h</option>
+                  <option value="3h">3h</option>
+                  <option value="4h">4h</option>
+                  <option value="5h">5h</option>
+                  <option value="6h">6h</option>
+                  
+                </select>
+                <p></p>
+        
+                <button type="submit" class="speichern">Speichern</button>
+                <input type="reset" value="Zurücksetzen" id="reset"/>
+                <button type="button" class="abbrechen" onclick="closeForm()">Abbrechen</button>
+                <script>
+                  function closeForm() {
+                    document.getElementById('form').style.display ="none";
+                  }
+          
+                </script>
+                
+              </form>
 
            
 

@@ -97,7 +97,6 @@ new TerminController(server, "/example");
 
 // Server tatsächlich starten
 server.listen(config.port, config.host, function() {
-    
     //// TODO: Konsolenausgabe anpassen (Name des Services usw.) ////
     console.log();
     console.log("=============");

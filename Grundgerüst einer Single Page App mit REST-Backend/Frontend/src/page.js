@@ -54,9 +54,9 @@ export default class Page {
         let dummyElement = document.createElement("div");
         dummyElement.innerHTML = this._htmlString;
 
-        this._cssString = dummyElement.querySelector("style")?.innerHTML;
-        this._mainElement = dummyElement.querySelector("main");
-        this._mainElement.remove();
+         this._cssString = dummyElement.querySelector("style")?.innerHTML;
+         this._mainElement = dummyElement.querySelector("main");
+         this._mainElement.remove();
     }
 
     /**

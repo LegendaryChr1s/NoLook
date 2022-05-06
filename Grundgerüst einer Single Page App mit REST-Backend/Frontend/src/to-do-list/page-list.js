@@ -32,8 +32,7 @@ export default class PageList extends Page {
         //// TODO: Anzuzeigende Inhalte laden mit this._app.backend.fetch() ////
         //// TODO: Inhalte in die HTML-Struktur einarbeiten ////
         //// TODO: Neue Methoden für Event Handler anlegen und hier registrieren ////
-        var element = this._mainElement.getElementById("calTab");
-        element.addEventListener("alert", alert('test'));
+        
     }
 };
 
