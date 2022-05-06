@@ -29,9 +29,9 @@
       <center>
       <div class="background">
         <div class="title">
-          <button class="arrow" onclick="moveRight()">&#10094;</button>
-          <label class="date">Mai 2022</label>
-          <button class="arrow" onclick="moveRight()">&#10095;</button>
+          <button class="arrow" id="moveRight">&#10094;</button>
+          <label class="date" id="month"></label>
+          <button class="arrow" id="moveRight">&#10095;</button>
         </div>
       <table id='calendar'>
         
@@ -99,35 +99,70 @@
           <td class='calendar_entry'><button id='calendar_entry_41'></button></td>
           <td class='calendar_entry'><button id='calendar_entry_42'></button></td>
         </tr>
-      </table></center>
+      </table>
+      <button type="submit" class="openform" onclick="showForm()"><b>Eintrag erstellen</b></button>
+      <script>
+        function showForm() {
+          document.getElementById('form').style.display = "block";
+        }
+
+      </script>
+    </center>
     
-      
+      <center>
+    </div>
     
+    <div class="form" id="form" style="display:none">
+      <form class="form-container">
+        <h1>Neuer Eintrag</h1>
     
-        <!--
-        <div id="container">
-          <div id="header">
-            <div id="monthDisplay"></div>
-            <div>
-              <button id="backButton">Zurück</button>
-              <button id="nextButton">Vor</button>
-            </div>
-          </div>
+        <label for="titel"><b>Titel: </b></label>
+        <input type="text" placeholder="Titel eingeben" required>
+        <p></p>
+        <label for="datum"><b>Datum:</b></label>
+        <input type="date" required>
+        <p></p>
+        <label for="uhrzeit"><b>Uhrzeit:</b></label>
+
+        <select name="uhrzeit" id="uhrzeit">
+          <option value="8">8:00</option>
+          <option value="9">9:00</option>
+          <option value="10">10:00</option>
+          <option value="11">11:00</option>
+          <option value="11">12:00</option>
+          <option value="11">13:00</option>
+          <option value="11">14:00</option>
+          <option value="11">15:00</option>
+          <option value="11">16:00</option>
+        </select>
+        <p></p>
+        <label for="uhrzeit"><b>Dauer:</b></label>
+
+        <select name="dauer" id="dauer">
+          <option value="1h">1h</option>
+          <option value="2h">2h</option>
+          <option value="3h">3h</option>
+          <option value="4h">4h</option>
+          <option value="5h">5h</option>
+          <option value="6h">6h</option>
+          
+        </select>
+        <p></p>
+
+        <button type="submit" class="speichern">Speichern</button>
+        <input type="reset" value="Zurücksetzen" id="reset"/>
+        <button type="button" class="abbrechen" onclick="closeForm()">Abbrechen</button>
+        <script>
+          function closeForm() {
+            document.getElementById('form').style.display ="none";
+          }
+  
+        </script>
+        
+      </form>
     
-          <div id="weekdays">
-            
-            <div>Montag</div>
-            <div>Dienstag</div>
-            <div>Mittwoch</div>
-            <div>Donnerstag</div>
-            <div>Freitag</div>
-            <div>Samstag</div>
-            <div>Sonntag</div>
-          </div>
-    
-          <div id="calendar"></div>
-        </div>
-      -->
-    </div>  
+    </div>
+  </center>
+ </div>  
       </body>
 </html>
