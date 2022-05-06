@@ -11,6 +11,7 @@ import RootController from "./controller/root.controller.js";
 // Verzeichnisnamen der Quellcodedatei ermitteln
 import path from "path";
 import { fileURLToPath } from "url";
+import TerminController from "./controller/termin.controller.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /* =============================================================================
@@ -92,6 +93,7 @@ server.use(OpenApiEnforcerMiddleware(openApiEnforcer));
 // HTTP-Controller registrieren
 //// TODO: Weitere Controller-Klassen hinzufügen ////
 new RootController(server, "/");
+new TerminController(server, "/example");
 
 // Server tatsächlich starten
 server.listen(config.port, config.host, function() {
@@ -111,7 +113,7 @@ server.listen(config.port, config.host, function() {
     console.log("  » HOST:    Hostname oder IP-Addresse, auf welcher der Webserver erreichbar ist");
     console.log("  » MONGODB: URL-String mit den Verbindungsdaten zur Mongo-Datenbank");
     console.log();
-    console.log(`OpenAPI-Spezifikation: ${openApiFile}`)
+    console.log(`OpenAPI-Spezifikation: ${openApiFile}`);
 
     if (openApiValidation.error) {
         console.error(`${openApiValidation.error}\n`);
