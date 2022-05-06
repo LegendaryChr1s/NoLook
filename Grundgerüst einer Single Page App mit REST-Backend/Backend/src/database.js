@@ -33,7 +33,7 @@ class DatabaseFactory {
     async _createDatabase() {
         //// TODO: Methode anpassen, um zur eigenen App passende Demodaten anzulegen ////
         //// oder die Methode ggf. einfach löschen und ihren Aufruf oben entfernen.  ////
-        let termine = this.database.collection("termine");
+        let example = this.database.collection("example");
 
         
     }

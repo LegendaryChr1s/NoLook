@@ -23,7 +23,7 @@ export default class Backend {
         // Backend-URL abrufen
         let response = await fetch("api.url");
         this._url = await response.text();
-
+        
         // Angehnängte Slashes entfernen
         while (this._url.endsWith("/")) {
             this._url = this._url.slice(0, this._url.length - 1);
@@ -49,6 +49,7 @@ export default class Backend {
 
 
     async fetch(method, url, options) {
+        
         options = options || {};
 
         
@@ -83,14 +84,17 @@ export default class Backend {
         fetchOptions.headers["Accept"] = "application/json";
 
         // REST-Webservice aufrufen
+       // alert(`${this._url}${url}`);
         let response = await fetch(`${this._url}${url}`, fetchOptions);
 
         if (response.ok) {
+           
             return await response.json();
         } else {
             // Exception werfen, wenn ein Fehler empfangen wurde
             let contentType = response.headers.get("Content-Type");
-
+          
+            
             if (contentType.includes("json")) {
                 throw await response.json();
             } else {
